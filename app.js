@@ -9,13 +9,41 @@
  *  }
  */ 
 
-var tmpl = ' <li id="ID">' +
-           '  <h3>SENTENCE</h3>' +
-           ' </li> ';
+var phrase = "";
+var check = 0;
+var i = 0;
 
 $(document).ready(function(){
-
+  //console.log(data[0].phrase_en);
+  //$('.final').hide();
   
+  $('.sentences').append( ' <li id="ID">' +
+                            '  <h3>' + data[i].phrase_en + '</h3>' +
+                            ' </li> ');
+  
+  $('.opt-continue').click(function(){
+    $('.sentences').empty();
+    phrase = $('#iSolution').val();
+    if (phrase=="") {
+      $('.sentences').append( ' <li id="ID">' +
+                              '  <h3>' + data[i].phrase_en + '</h3>' +
+                              ' </li> ');
+      alert("Insert an answer");
+    } else if(i == (data.length-1)) {
+      console.log();
+      $('.practice').hide();
+      $('.final').append('<h3> You have solved <span id="tot-good">'+check+'</span> of <span id="tot">'+i+'</span></h3>')
+    } else {    
+      if(phrase == data[i].phrase_de) {
+        check++;
+        console.log(check);
+      }
+      i++;
+      $('.sentences').append( ' <li id="ID">' +
+                              '  <h3>' + data[i].phrase_en + '</h3>' +
+                              ' </li> ');
+    }
+  });
 });
 
 

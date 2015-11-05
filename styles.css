@@ -28,7 +28,7 @@ h1 > span{
   margin-right: 20px;
   margin-top: 20px;
   text-align: center;  
-  display: none;
+  /*display: none;*/
 }
 
 .sentences > li h3 {
