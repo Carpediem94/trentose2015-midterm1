@@ -30,7 +30,7 @@ $(document).ready(function(){
     } else if(i == (data.length-1)) {
       console.log();
       $('.practice').hide();
-      $('.final').append('<h3> You have solved <span id="tot-good">'+check+'</span> of <span id="tot">'+i+'</span></h3>')
+      $('.final').append('<h3> You have solved <span id="tot-good">'+check+'</span> of <span id="tot">'+(i+1)+'</span></h3>')
     } else {    
       if(phrase == data[i].phrase_de) {
         check++;
