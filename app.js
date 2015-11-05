@@ -14,9 +14,7 @@ var check = 0;
 var i = 0;
 
 $(document).ready(function(){
-  //console.log(data[0].phrase_en);
-  //$('.final').hide();
-  
+
   $('.sentences').append( ' <li id="ID">' +
                             '  <h3>' + data[i].phrase_en + '</h3>' +
                             ' </li> ');
